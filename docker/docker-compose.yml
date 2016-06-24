@@ -1,0 +1,17 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    links:
+      - database:db
+    env_file: development.env
+
+  database:
+    image: postgres:9.5
+    environment:
+      POSTGRES_USER: ttrack
+      POSTGRES_PASSWORD: ttrack
