@@ -40,7 +40,7 @@ TODO: need documentation how to start the docker version.
 To setup the users you need to be comfortable using the psql shell and working with the database as there is no Administration Interface, everything is done using pure sql.
 The `user` table is your main starting point.
 
-Also the austrian holdiays are kind of hardcoded.
+Also the austrian holidays are kind of hardcoded.
 
 ## Development
 
@@ -55,7 +55,7 @@ Prefer to do this locally which will be more efficient.
 # don't forget migrations!
 $ db-migrate up
 
-# start the ttrack server (port 8080)
+# start the TTrack server (port 8080)
 $ npm start
 
 # start the webpack dev server
@@ -66,7 +66,7 @@ $ open http://localhost:8080
 ```
 
 The webpack dev server watches the sources and serves the built JS and CSS with hot reloading enabled.
-The ttrack server serves the main index.html and the rest API. It requests JS and CSS from the webpack dev server.
+The TTrack server serves the main index.html and the rest API. It requests JS and CSS from the webpack dev server.
 
 ### Contributors
 
