@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/25th-floor/ttrack.svg?branch=master)](https://travis-ci.org/25th-floor/ttrack)
 
-A Time Tracking application. Needs a Postgres Database.
+A Time Tracking application.
 
 ## Getting Stated
 
@@ -33,7 +33,22 @@ npm start
 ```
 
 ### Docker Variant
-TODO: need documentation how to start the docker version.
+
+Starting with docker does not require any node or npm present on the host machine, just docker itself.
+For development the use of docker-compose is recommended.
+
+The following describes the development environment, deployment/production setup will follow soon.
+
+#### Starting the application
+The first block is only required to install the database schema before the actual application
+starts and can be omitted afterwards:
+```
+docker-compose up -d database
+docker-compose run app migrate
+# docker-compose run app install-demo-data # (optional, and not working yet - have a look at docker/demo_data.sql)
+
+docker-compose up
+```
 
 ## Administration
 
