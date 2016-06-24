@@ -72,6 +72,5 @@ app.listen(port);
 
 console.log('listening on port ' + port + '...');
 
-process.on('SIGINT', function () {
-    process.exit();
-});
+process.on('SIGINT', process.exit);
+process.on('SIGTERM', process.exit);
